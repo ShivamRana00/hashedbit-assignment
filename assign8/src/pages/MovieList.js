@@ -5,7 +5,7 @@ import '../styles.css';
 const movies = Array.from({ length: 16 }, (_, i) => ({
   id: i + 1,
   title: `Movie ${i + 1}`,
-  image: "https://via.placeholder.com/150"
+   image: `/images/movie${i + 1}.jpg`
 }));
 
 function MovieList() {
