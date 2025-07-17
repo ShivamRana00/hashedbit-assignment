@@ -11,4 +11,4 @@ function correctfn(str, wrong, correct) {
 let result = correctfn("He is a good boi", "boi", "boy");
 console.log(result);
 
-return str.replace(new RegExp(wrong, 'g'), correct);
+// return str.replace(new RegExp(wrong, 'g'), correct);
