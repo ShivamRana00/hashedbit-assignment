@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Object and Array Functions</title>
+</head>
+<body>
+  <h2>JavaScript Practice Tasks</h2>
+
+  <button onclick="greetPerson()">1. Greet Person</button>
+  <p id="greeting"></p>
+
+  <button onclick="calculateArea()">2. Calculate Rectangle Area</button>
+  <p id="area"></p>
+
+  <button onclick="getObjectKeys()">3. Get Object Keys</button>
+  <p id="keys"></p>
+
+  <button onclick="mergeObjects()">4. Merge Two Objects</button>
+  <p id="merged"></p>
+
+  <button onclick="sumNumbers()">5. Sum Array Using reduce()</button>
+  <p id="sum"></p>
+
+  <script>
+    // Task 1: Greet using person object
+    const person = {
+      name: "Aman",
+      age: 22,
+      occupation: "Student"
+    };
+
+    function greetPerson() {
+      const message = `Hello, my name is ${person.name}, I'm ${person.age} years old and I work as a ${person.occupation}.`;
+      document.getElementById("greeting").textContent = message;
+    }
+
+    // Task 2: Calculate area of rectangle
+    function calculateArea() {
+      const rectangle = { width: 5, height: 10 };
+      const area = rectangle.width * rectangle.height;
+      document.getElementById("area").textContent = `Area of rectangle: ${area}`;
+    }
+
+    // Task 3: Get keys of an object
+    function getObjectKeys() {
+      const sampleObject = { a: 1, b: 2, c: 3 };
+      const keys = Object.keys(sampleObject);
+      document.getElementById("keys").textContent = `Object keys: ${keys.join(", ")}`;
+    }
+
+    // Task 4: Merge two objects
+    function mergeObjects() {
+      const obj1 = { name: "Aman", age: 22 };
+      const obj2 = { occupation: "Student", city: "Lucknow" };
+      const merged = Object.assign({}, obj1, obj2);
+      document.getElementById("merged").textContent = `Merged object: ${JSON.stringify(merged)}`;
+    }
+
+    // Task 5: Sum numbers using reduce()
+    function sumNumbers() {
+      const numbers = [10, 20, 30, 40, 50];
+      const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+      document.getElementById("sum").textContent = `Sum of numbers: ${sum}`;
+    }
+  </script>
+</body>
+</html>

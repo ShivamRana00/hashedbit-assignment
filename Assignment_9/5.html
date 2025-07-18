@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter Odd Numbers using filter()</title>
+</head>
+<body>
+  <h2>Filter Odd Numbers Using filter()</h2>
+  <p>Original array: <span id="original"></span></p>
+  <button onclick="filterOddNumbers()">Show Odd Numbers</button>
+  <p>Odd numbers array: <span id="odd"></span></p>
+
+  <script>
+    // Create an array of numbers
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // Display original array
+    document.getElementById("original").textContent = numbers.join(", ");
+
+    // Function to filter out even numbers using filter()
+    function filterOddNumbers() {
+      const oddNumbers = numbers.filter(function(num) {
+        return num % 2 !== 0; // keep only odd numbers
+      });
+
+      // Display the odd numbers array
+      document.getElementById("odd").textContent = oddNumbers.join(", ");
+    }
+  </script>
+</body>
+</html>
