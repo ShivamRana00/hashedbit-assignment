@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Numbers using map()</title>
+</head>
+<body>
+  <h2>Square Numbers Using map()</h2>
+  <p>Original array: <span id="original"></span></p>
+  <button onclick="squareNumbers()">Square the Numbers</button>
+  <p>Squared array: <span id="squared"></span></p>
+
+  <script>
+    // Create an array of numbers
+    const numbers = [1, 2, 3, 4, 5];
+
+    // Display original array
+    document.getElementById("original").textContent = numbers.join(", ");
+
+    // Function to square each number using map()
+    function squareNumbers() {
+      const squaredArray = numbers.map(function(num) {
+        return num * num;
+      });
+
+      // Display the squared array
+      document.getElementById("squared").textContent = squaredArray.join(", ");
+    }
+  </script>
+</body>
+</html>

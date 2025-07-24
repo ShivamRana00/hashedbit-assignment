@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modify Array with push() and pop()</title>
+</head>
+<body>
+  <h2>Modify Fruit Array</h2>
+  <p>Original array: <span id="original"></span></p>
+  <button onclick="handleArray()">Modify Array</button>
+  <p>Modified array: <span id="modified"></span></p>
+
+  <script>
+    // Define the initial array
+    const fruits = ["Apple", "Banana", "Cherry", "Mango", "Pineapple"];
+
+    // Display original array
+    document.getElementById("original").textContent = fruits.join(", ");
+
+    // Function that modifies the array
+    function modifyArray(arr) {
+      arr.push("New Fruit");  // Add a new element
+      arr.pop();              // Remove the last element (the one we just added)
+      return arr;
+    }
+
+    // Function to handle button click
+    function handleArray() {
+      const modified = modifyArray([...fruits]); // Use a copy to keep original unchanged
+      document.getElementById("modified").textContent = modified.join(", ");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruits Array Example</title>
+</head>
+<body>
+  <h2>Fruit Array Demo</h2>
+  <p id="result"></p>
+
+  <script>
+    // Create an array of fruits
+    const fruits = ["Apple", "Banana", "Cherry", "Mango", "Pineapple"];
+
+    // Function to return the second fruit
+    function getSecondFruit() {
+      return fruits[1]; // Arrays are 0-indexed
+    }
+
+    // Display the result on the page
+    document.getElementById("result").textContent = "The second fruit is: " + getSecondFruit();
+  </script>
+</body>
+</html>
+
